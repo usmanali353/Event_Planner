@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    tools:context=".verify_code_page"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout
+            android:background="#ffffffff"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="#ff4b759e"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="100.0dip"
+                    android:layout_height="100.0dip"
+                    android:src="@drawable/banner_verify_mobile" />
+                <TextView
+                    android:textSize="13.0dip"
+                    android:textColor="#ffffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14.0dip"
+                    android:text="Lets get your"
+                    android:fontFamily="@font/raleway_bold" />
+                <TextView
+                    android:textSize="20.0dip"
+                    android:textColor="#ffffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2.0dip"
+                    android:layout_marginBottom="15.0dip"
+                    android:text="Mobile Verified"
+                    android:fontFamily="@font/raleway_bold" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:background="#ffffff"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="14.0dip"
+                    android:textColor="#90a29e9e"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14.0dip"
+                    android:text="@string/verification_code_title"
+                    android:fontFamily="@font/a" />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title"
+                    android:layout_marginTop="16dp"
+                    android:id="@+id/pin"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:hint="Verification Code"
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:id="@+id/verification_txt"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/verify"
+            android:layout_alignParentBottom="true"
+            android:text="Verify"
+            android:textColor="@android:color/white"
+            android:background="@drawable/btn_style_a"
+            android:layout_margin="16dp"
+            />
+    </RelativeLayout>
+</ScrollView>

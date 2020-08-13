@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.event_planner">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/splash"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/splash"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".requestDetails"
+            android:label="@string/title_activity_request_details"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".request_list_page"
+            android:label="@string/title_activity_request_list_page"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".Halls_list_page"
+            android:label="@string/title_activity_halls_list_page"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".OfferingUpdatePage"
+            android:label="@string/title_activity_offering_update_page"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".serviceProviderBookingDetailsPage"
+            android:label="@string/title_activity_service_provider_booking_details_page"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".serviceProviderBookingsList"
+            android:label="@string/title_activity_service_provider_bookings_list"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BookingDetailPage"
+            android:label="@string/title_activity_booking_detail_page"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BookingListPage"
+            android:label="@string/title_activity_booking_list_page"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".reservation_details_page"
+            android:label="@string/title_activity_reservation_details_page"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".services_page"
+            android:label="@string/title_activity_services_page"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".food_list_page"
+            android:label="@string/title_activity_food_list_page"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".theme_list_page"
+            android:label="@string/title_activity_theme_list_page"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Login"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Register_User" />
+        <activity
+            android:name=".Home"
+            android:label="Home" />
+        <activity
+            android:name=".splash_screen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".selection" />
+        <activity android:name=".Admin_home" />
+        <activity
+            android:name=".verify_code_page"
+            android:screenOrientation="portrait" />
+        <activity android:name=".hotel_details_page" />
+        <activity android:name=".hotel_offering_page" />
+
+        <service
+            android:name=".FCM_SERVICE.fcm_service"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

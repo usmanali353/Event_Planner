@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".hotel_details_page">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="370dp"
+        android:id="@+id/appbar"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapse_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:text=" "
+            android:background="#fff"
+            android:textDirection="firstStrong"
+            app:toolbarId="@+id/toolbar"
+            app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/header_cover_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img" />
+                <ImageView
+                    android:id="@+id/service_provider_photo"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_below="@+id/header_cover_image"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="-60dp"
+                    android:elevation="5dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:scaleType="fitXY"
+                    />
+                <RelativeLayout
+                    android:id="@+id/profile_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/header_cover_image"
+                    android:elevation="10dp"
+                    android:background="@null"
+                    android:paddingBottom="20dp">
+                    <TextView
+                        android:id="@+id/hotel_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="76dp"
+                        android:textSize="24sp"
+                        android:text="Diamond Marquee"
+                        android:textColor="@color/cardview_dark_background"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fab"
+        android:layout_marginEnd="10dp"
+        app:layout_anchor="@id/header_cover_image"
+        app:layout_anchorGravity="bottom|right|end"
+        android:src="@drawable/ic_info"
+        />
+    <include layout="@layout/content_hotel_details_page" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

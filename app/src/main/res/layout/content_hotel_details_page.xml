@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".hotel_details_page"
+    tools:showIn="@layout/activity_hotel_details_page">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/nestedscrollview"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="16dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/productdetailcard"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:paddingTop="16dp"
+                android:layout_marginEnd="5dp"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:padding="@dimen/activity_horizontal_margin">
+
+                            <ImageView
+                                android:id="@+id/phonepic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                                android:src="@drawable/ic_action_phone" />
+
+                            <TextView
+                                android:id="@+id/phonenumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                                android:layout_toEndOf="@id/phonepic"
+                                android:layout_toRightOf="@id/phonepic"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="#212121" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/phonenumber"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                                android:layout_marginTop="8dp"
+                                android:layout_toEndOf="@id/phonepic"
+                                android:layout_toRightOf="@id/phonepic"
+                                android:text="Phone"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                android:textColor="#727272" />
+                        </RelativeLayout>
+                        <include layout="@layout/item_divider" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:padding="@dimen/activity_horizontal_margin">
+
+                            <ImageView
+                                android:id="@+id/Emailpic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                                android:src="@drawable/ic_email" />
+
+                            <TextView
+                                android:id="@+id/email"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                                android:layout_toEndOf="@id/Emailpic"
+                                android:layout_toRightOf="@id/Emailpic"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="#212121" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/email"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                                android:layout_marginTop="8dp"
+                                android:layout_toEndOf="@id/Emailpic"
+                                android:layout_toRightOf="@id/Emailpic"
+                                android:text="Email"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                android:textColor="#727272" />
+                        </RelativeLayout>
+                        <include layout="@layout/item_divider" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:padding="@dimen/activity_horizontal_margin">
+                            <ImageView
+                                android:id="@+id/locationpic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                                android:src="@drawable/ic_location" />
+
+                            <TextView
+                                android:id="@+id/location"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                                android:layout_toEndOf="@id/locationpic"
+                                android:layout_toRightOf="@id/locationpic"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="#212121" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/location"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                                android:layout_marginTop="8dp"
+                                android:layout_toEndOf="@id/locationpic"
+                                android:layout_toRightOf="@id/locationpic"
+                                android:text="Address"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                android:textColor="#727272" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/productdetailcard"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorPrimary"
+                android:text="Book This Hotel"
+                android:background="@null"
+                android:id="@+id/book_hotel_btn"
+                />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>
+

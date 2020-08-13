@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+  <com.google.android.material.textfield.TextInputLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="16dp"
+      android:id="@+id/name_textinputlayout"
+      android:hint="Name"
+      >
+      <com.google.android.material.textfield.TextInputEditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/name_txt"
+          />
+  </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:id="@+id/price_textinputlayout"
+        android:hint="Price"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/price_txt"
+            android:inputType="number"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <fr.ganfra.materialspinner.MaterialSpinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/available"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        app:ms_multiline="false"
+        app:ms_hint="Select Availablity"
+        app:ms_enableFloatingLabel="true"
+        android:entries="@array/Available"
+        app:ms_enableErrorLabel="true"
+        app:ms_floatingLabelText="Select Availablity"
+        app:ms_arrowSize="16dp"
+        app:ms_alignLabels="false"
+        android:layout_marginEnd="16dp"/>
+</LinearLayout>

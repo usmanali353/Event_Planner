@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Event_Planner</string>
+    <string-array name="cities">
+        <item>Gujrat</item>
+        <item>Wazirabad</item>
+        <item>Gujrawala</item>
+    </string-array>
+    <string-array name="type">
+        <item>Customer</item>
+        <item>Service Provider</item>
+    </string-array>
+    <string-array name="party_type">
+        <item>Birthday</item>
+        <item>Marriage</item>
+        <item>Meeting</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="Available">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+    <string name="phone_verification_title">Enter your phone number\nto receive the code</string>
+    <string name="verification_code_title">Enter Verification Code\n Received through SMS</string>
+    <string name="title_activity_theme_list_page">Themes</string>
+    <string name="title_activity_food_list_page">Food</string>
+    <string name="title_activity_services_page">Services</string>
+    <string name="title_activity_reservation_details_page">Reservation Details</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_booking_list_page">Your Bookings</string>
+    <string name="title_activity_booking_detail_page">Booking Detail</string>
+    <string name="title_activity_service_provider_bookings_list">Bookings</string>
+    <string name="title_activity_service_provider_booking_details_page">Booking Details</string>
+    <string name="title_activity_offering_update_page">Update Offered Services</string>
+    <string name="title_activity_halls_list_page">Select Halls</string>
+    <string name="title_activity_request_list_page">Approval Requests</string>
+    <string name="title_activity_request_details">Request Details</string>
+</resources>

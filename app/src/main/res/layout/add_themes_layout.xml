@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+ <com.google.android.material.textfield.TextInputLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:id="@+id/theme_name_textinputlayout"
+     android:hint="Theme Name"
+     android:layout_marginTop="16dp"
+     android:layout_marginStart="16dp"
+     android:layout_marginEnd="16dp"
+     >
+     <com.google.android.material.textfield.TextInputEditText
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/theme_name_txt"
+         android:inputType="text"
+         />
+
+ </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/theme_price_textinputlayout"
+        android:hint="Theme Price"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/theme_price_txt"
+            android:inputType="number"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:src="@drawable/upload"
+        android:id="@+id/theme_image"
+        android:layout_marginTop="16dp"
+        />
+
+</LinearLayout>

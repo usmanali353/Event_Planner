@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    tools:context=".hotel_details_page">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="370dp"
+        android:id="@+id/appbar"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapse_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:text=" "
+            android:background="#fff"
+            android:textDirection="firstStrong"
+            app:toolbarId="@+id/toolbar"
+            app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/header_cover_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img" />
+                <ImageView
+                    android:id="@+id/service_provider_photo"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_below="@+id/header_cover_image"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="-60dp"
+                    android:elevation="5dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:scaleType="fitXY"
+                    />
+                <RelativeLayout
+                    android:id="@+id/profile_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/header_cover_image"
+                    android:elevation="10dp"
+                    android:background="@null"
+                    android:paddingBottom="20dp">
+                    <TextView
+                        android:id="@+id/hotel_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="76dp"
+                        android:textSize="24sp"
+                        android:text="Diamond Marquee"
+                        android:textColor="@color/cardview_dark_background"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <include layout="@layout/content_admin_home" />
+    <com.github.clans.fab.FloatingActionMenu
+        android:layout_gravity="bottom|center|end"
+        android:id="@+id/fab_menu"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginBottom="10.0dip"
+        fab:menu_animationDelayPerItem="50"
+        fab:menu_backgroundColor="@android:color/transparent"
+        fab:menu_buttonSpacing="0.0dip"
+        fab:menu_colorNormal="#ffd84343"
+        fab:menu_colorPressed="#fff24c4c"
+        fab:menu_colorRipple="#99ffffff"
+        fab:menu_fab_label=""
+        fab:menu_fab_size="normal"
+        fab:menu_icon="@drawable/ic_menu_black_24dp"
+        fab:menu_labels_colorNormal="#ff534e4e"
+        fab:menu_labels_colorPressed="#ff534e4e"
+        fab:menu_labels_colorRipple="#66ffffff"
+        fab:menu_labels_cornerRadius="2.0dip"
+        fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        fab:menu_labels_margin="0.0dip"
+        fab:menu_labels_padding="8.0dip"
+        fab:menu_labels_paddingBottom="4.0dip"
+        fab:menu_labels_paddingLeft="8.0dip"
+        fab:menu_labels_paddingRight="8.0dip"
+        fab:menu_labels_paddingTop="4.0dip"
+        fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        fab:menu_labels_showShadow="true"
+        fab:menu_labels_textColor="#ffffffff"
+        fab:menu_labels_textSize="14.0dip"
+        fab:menu_openDirection="up"
+        fab:menu_shadowColor="#30000000"
+        fab:menu_shadowRadius="1.0dip"
+        fab:menu_shadowXOffset="1.0dip"
+        fab:menu_shadowYOffset="1.0dip"
+        fab:menu_showShadow="true">
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_add_services"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fab_add"
+            fab:fab_colorRipple="#66ffffff"
+            fab:fab_label="Add Offering"
+            fab:fab_size="mini"
+            fab:menu_colorNormal="#ffd84343"
+            fab:menu_colorPressed="#fff24c4c" />
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_update_services"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_mode_edit_black_24dp"
+            fab:fab_colorRipple="#66ffffff"
+            fab:fab_label="Update Offering"
+            fab:fab_size="mini"
+            fab:menu_colorNormal="#ffd84343"
+            fab:menu_colorPressed="#fff24c4c" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_your_orders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_event_note_black_24dp"
+            fab:fab_colorRipple="#66ffffff"
+            fab:fab_label="My Bookings"
+            fab:fab_size="mini"
+            fab:menu_colorNormal="#ffd84343"
+            fab:menu_colorPressed="#fff24c4c" />
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_update_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/update_profile"
+            fab:fab_colorRipple="#66ffffff"
+            fab:fab_label="Update Profile"
+            fab:fab_size="mini"
+            fab:menu_colorNormal="#ffd84343"
+            fab:menu_colorPressed="#fff24c4c" />
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logout"
+            fab:fab_colorRipple="#66ffffff"
+            fab:fab_label="Sign Out"
+            fab:fab_size="mini"
+            fab:menu_colorNormal="#ffd84343"
+            fab:menu_colorPressed="#fff24c4c" />
+    </com.github.clans.fab.FloatingActionMenu>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
